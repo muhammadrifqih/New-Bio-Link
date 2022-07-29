@@ -10,10 +10,3 @@ button.addEventListener('click', function(){
         this.textContent = 'Drak Mode';
     }
 });
-
-var icon = document.querySelector('.toggler .icon');
-var cont = document.querySelector('.toggler');
-cont.addEventListener('click',function(){
-  var cls = cont.classList;
-  cls.toggle('sun')
-})

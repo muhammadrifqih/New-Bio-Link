@@ -1,20 +1,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Trispace:wght@400;600;700&display=swap');
 
 :root {
-    --header-color: #005555;
+    /* --header-color: #005555;
     --text-color: #F7FF93;
     --body-color: #f1f5b7;
     --background-color: #F7FF93;
-    --link-color: #069A8E;
+    --link-color: #069A8E; */
 
-}
-
-html[data-color-mode='drak'] {
     --header-color: #E7F6F2;
     --text-color: #E7F6F2;
     --body-color: #2C3639;
     --background-color: #3F4E4F;
     --link-color: #2C3333;
+}
+
+html[data-color-mode='light'] {
+    /* --header-color: #E7F6F2;
+    --text-color: #E7F6F2;
+    --body-color: #2C3639;
+    --background-color: #3F4E4F;
+    --link-color: #2C3333; */
+
+    --header-color: #005555;
+    --text-color: #F7FF93;
+    --body-color: #f1f5b7;
+    --background-color: #F7FF93;
+    --link-color: #069A8E;
 }
 
 * {
