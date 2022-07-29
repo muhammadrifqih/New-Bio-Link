@@ -84,14 +84,7 @@ body{
     color: var(--header-color);
 }
 
-@media (max-width:992px) {
-    .link {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        margin-bottom: 15rem;
-    }
-}
+
 
 
 #darkSwitch{
@@ -137,3 +130,14 @@ body{
     background: var(--body-color);
 }
 
+@media (max-width:992px) {
+    .link {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-bottom: 15rem;
+    }
+    #darkSwitch{
+        right: 1rem;
+    }
+}
