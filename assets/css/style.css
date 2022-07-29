@@ -1,5 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Trispace:wght@400;600;700&display=swap');
 
+:root {
+    --header-color: #005555;
+    --text-color: #F7FF93;
+    --body-color: #f1f5b7;
+    --background-color: #F7FF93;
+    --link-color: #069A8E;
+
+}
+
+html[data-color-mode='drak'] {
+    --header-color: #E7F6F2;
+    --text-color: #E7F6F2;
+    --body-color: #2C3639;
+    --background-color: #3F4E4F;
+    --link-color: #2C3333;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -7,12 +24,12 @@
 
 body{
     font-family:  'Trispace', sans-serif;
-    background-color: #f1f5b7;
+    background-color: var(--body-color);
 }
 .container {
     max-width: 500px;
     margin: 0 auto;
-    background-color: #F7FF93;
+    background-color: var(--background-color);
     height: 20%;
     border-radius: 5px;
 }
@@ -26,11 +43,11 @@ body{
 }
 
 .profil > img {
-    background-color: #069A8E;
+    background-color: var(--link-color);
     border-radius: 100%;
 }
 .profil > h1 {
-    color: #005555;
+    color: var(--header-color);
     font-size: 22px;
     padding: 10px;
 }
@@ -44,20 +61,19 @@ body{
 .link>a {
     text-decoration: none;
     text-align: center;
-    background-color: #069A8E;
+    background-color: var(--link-color);
     margin: 10px;
     border-radius: 5px;
-    color: #F7FF93;
+    color: var(--text-color);
     padding: 10px
 }
 .link>a:hover{
     text-decoration: none;
     text-align: center;
-    background-color: #F7FF93;
+    background-color: var(--text-color);
     margin: 10px;
     border-radius: 5px;
-    border: #069A8E solid;
-    color: #069A8E;
+    color: var(--link-color);
     transition: 0.5s ease-in-out;
 }
 
@@ -65,7 +81,7 @@ body{
     text-align: center;
     padding-top: 50px;
     padding-bottom: 10px;
-    color: #005555;
+    color: var(--header-color);
 }
 
 @media (max-width:992px) {
@@ -76,3 +92,48 @@ body{
         margin-bottom: 15rem;
     }
 }
+
+
+#darkSwitch{
+    position: fixed;
+    top: 20px;
+    right: 28rem;
+    appearance: none;
+    -webkit-appearance : none;
+    -moz-appearance : none;
+    -o-appearance : none;
+    width: 40px;
+    height: 20px;
+    background: var(--link-color);
+    border-radius: 22px;
+    cursor: pointer;
+    outline: none;
+}
+
+#darkSwitch::before{
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color:white;
+    border-radius: 35px;
+    top: 2px;
+    left: 2px;
+    cursor: pointer;
+    transition: .3s linear;
+}
+
+
+#darkSwitch:checked + .container{
+  background: rgb(19, 18, 18);
+  color: white;
+}
+
+#darkSwitch:checked::before{
+    left: 20px;
+}
+
+#darkSwitch:checked{
+    background: var(--body-color);
+}
+
