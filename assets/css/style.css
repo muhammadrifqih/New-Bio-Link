@@ -119,7 +119,7 @@ body{
     position: absolute;
     width: 15px;
     height: 15px;
-    background-color:white;
+    background-color:var(--header-color);
     border-radius: 35px;
     top: 2px;
     left: 2px;
@@ -130,7 +130,7 @@ body{
 
 #darkSwitch:checked + .container{
   background: rgb(19, 18, 18);
-  color: white;
+  color: var(--header-color);
 }
 
 #darkSwitch:checked::before{
